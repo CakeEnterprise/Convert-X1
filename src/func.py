@@ -17,3 +17,6 @@ class PNG:
     def grayscale(self):
         self.data = self.data.convert("L")
 
+    def black_and_white(self):
+        # lambda function to convert each point to black or white
+        self.__data = self.__data.point(lambda x: 0 if x < 128 else 255, '1')
