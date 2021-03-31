@@ -15,4 +15,5 @@ class PNG:
             self.data.save(self.filename.replace(".png",".jpg"),"jpeg")
 
     def grayscale(self):
-        self.data = self.data.convert("greyscale")
+        self.data = self.data.convert("L")
+
