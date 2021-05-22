@@ -7,13 +7,14 @@ class PNG:
         from PIL import Image
         return Image.open(filename)
 
+    # file conversion methods
     def to_jpg(self,filename=None):
         self.__data = self.__data.convert("RGB")
         if filename is not None:
             self.__data.save(filename,"jpeg")
         else:
             self.__data.save(self.filename.replace(".png",".jpg"),"jpeg")
-    
+
     # utility function to change image data
     def grayscale(self):
         self.__data = self.__data.convert("L")
